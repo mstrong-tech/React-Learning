@@ -1,10 +1,13 @@
-import Todos from './components/Todos';
+import Todos from "./components/Todos";
+import NewTodoItem from "./components/NewTodoItem";
+import TodosContextProvider from "./store/todos-context";
 
 function App() {
   return (
-    <div>
-      <Todos items={['First', 'Second']} />
-    </div>
+    <TodosContextProvider>
+      <NewTodoItem />
+      <Todos />
+    </TodosContextProvider>
   );
 }
 
